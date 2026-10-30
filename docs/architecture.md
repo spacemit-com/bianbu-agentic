@@ -5,21 +5,7 @@
 
 ## 1. 分层
 
-```text
-┌──────────────────────────────────────────────────────────────┐
-│ 交互层   bibit（桌面 GUI）  bibit-voice（语音）  lxqt-schedule（日程提醒）│
-├──────────────────────────────────────────────────────────────┤
-│ 能力层   bibit-intent（意图路由）  bibit-filesearch（本地检索）  bianbu-agent-memory（记忆）│
-├──────────────────────────────────────────────────────────────┤
-│ 运行时   bianbu-agent-runtime（会话/生命周期/模型调用/Tool 执行）│
-├──────────────────────────────────────────────────────────────┤
-│ 安全     bianbu-agent-security（审批、能力同步、securityd 签名清单）│
-├──────────────────────────────────────────────────────────────┤
-│ 资源     bianbu-skill（Skill 镜像）  agent-power-manager（Power 管理）│
-└──────────────────────────────────────────────────────────────┘
-        BiBit 插件层：bibit-runtime-plugin / bibit-agenthub-plugin
-                     bibit-filesearch-plugin / bibit-memory-plugin
-```
+![Bianbu AgentOS 架构](images/architecture-zh.png)
 
 分层是职责划分，不是编译依赖。组件之间通过下列集成面通信，没有跨仓库的头文件或链接依赖。
 

@@ -4,13 +4,23 @@ English | [简体中文](README_zh.md)
 
 Bianbu AgentOS brings together the components that make up the on-device agent
 operating system for SpacemiT K-series processors. The repository organizes the
-components as **Git submodules**, in the same way as
-[ai-sdk](https://github.com/spacemit-com/ai-sdk): each component keeps its own
-repository, release cadence and Debian packaging, while this repository records
-one pinned commit per component so a whole system image can be reproduced from a
-single SHA.
+components as **Git submodules**: each component keeps its own repository,
+release cadence and Debian packaging, while this repository records one pinned
+commit per component so a whole system image can be reproduced from a single
+SHA.
 
-## 1. Overview
+## 1. Architecture
+
+![Bianbu AgentOS architecture](docs/images/architecture-en.png)
+
+The desktop layer hosts the BiBit GUI with its signed plugins, the offline voice
+service and the LXQt schedule module. The agent runtime drives sessions,
+lifecycle, model calls and tool execution, with memory and security as
+first-class subsystems. Capability services provide intent routing and local
+semantic search, and the tooling layer mirrors Skills and manages powers. See
+[docs/architecture.md](docs/architecture.md) for the full notes.
+
+## 2. Overview
 
 Component directories live at the root of this repository. Nothing else is
 vendored here — the umbrella repository holds only the submodule pointers,
@@ -53,7 +63,7 @@ documentation and tooling.
 > Note: `branch` in `.gitmodules` is only consulted by `--remote` operations.
 > What a checkout actually pins is the commit recorded in the superproject index.
 
-## 2. Getting the source
+## 3. Getting the source
 
 A recursive clone is recommended:
 
@@ -81,7 +91,7 @@ make update        # fast-forward submodules to the commits recorded in this rep
 `make sync` only changes the working tree. Commit the submodule pointers
 afterwards if the new versions should be published.
 
-## 3. Layout
+## 4. Layout
 
 ```text
 bianbu-agentic/
@@ -105,7 +115,7 @@ bianbu-agentic/
 └── .github/workflows/           # submodule pointer sync
 ```
 
-## 4. Version policy
+## 5. Version policy
 
 - Every component is pinned to a commit. An image is reproducible from the
   superproject SHA alone; `git describe` of the umbrella repository is the
@@ -119,7 +129,7 @@ bianbu-agentic/
 - Two components track `bianbu-26.04` instead of `main`: `bibit-agenthub-plugin`
   and `agent-power-manager`.
 
-## 5. Adding or removing a component
+## 6. Adding or removing a component
 
 ```bash
 git submodule add -b main https://github.com/spacemit-com/<repo>.git <repo>
@@ -141,7 +151,9 @@ git rm -f <repo>
 rm -rf .git/modules/<repo>
 ```
 
-## 6. Documentation
+## 7. Documentation
 
 - [Architecture notes (中文)](docs/architecture.md)
+- Architecture diagrams: `docs/images/architecture-{zh,en}.svg`, regenerate with
+  `python3 docs/images/architecture.py <zh|en> <out.svg>`
 - Component READMEs under each submodule directory

@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 852" width="1240" height="852" role="img">
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="8" orient="auto"><path d="M2.5 1.5L8 5L2.5 8.5" fill="none" stroke="#5F5E5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<rect x="0" y="0" width="1240" height="852" fill="#FFFFFF"/>
+<line x1="134" y1="64" x2="134" y2="812" stroke="#D3D1C7" stroke-width="1"/>
+<line x1="128" y1="156" x2="134" y2="156" stroke="#D3D1C7" stroke-width="1"/>
+<text x="122" y="156" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" font-weight="500" fill="#2C2C2A" text-anchor="end" dominant-baseline="central">Desktop</text>
+<line x1="128" y1="413" x2="134" y2="413" stroke="#D3D1C7" stroke-width="1"/>
+<text x="122" y="413" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" font-weight="500" fill="#2C2C2A" text-anchor="end" dominant-baseline="central">Runtime</text>
+<line x1="128" y1="640" x2="134" y2="640" stroke="#D3D1C7" stroke-width="1"/>
+<text x="122" y="640" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" font-weight="500" fill="#2C2C2A" text-anchor="end" dominant-baseline="central">Services</text>
+<line x1="128" y1="764" x2="134" y2="764" stroke="#D3D1C7" stroke-width="1"/>
+<text x="122" y="764" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" font-weight="500" fill="#2C2C2A" text-anchor="end" dominant-baseline="central">Tooling</text>
+<rect x="150" y="64" width="610" height="176" rx="14" fill="#F2F8FE" stroke="#185FA5" stroke-width="1"/>
+<text x="168" y="96" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="17" font-weight="500" fill="#0C447C" text-anchor="start" dominant-baseline="central">bibit</text>
+<text x="168" y="118" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="12.5" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">BiBit GUI · Tauri desktop shell · signed plugin host</text>
+<rect x="168" y="136" width="282" height="32" rx="8" fill="#FFFFFF" stroke="#B5D4F4" stroke-width="0.9"/>
+<text x="182" y="152" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="12" font-weight="400" fill="#0C447C" text-anchor="start" dominant-baseline="central">bibit-runtime-plugin</text>
+<rect x="460" y="136" width="282" height="32" rx="8" fill="#FFFFFF" stroke="#B5D4F4" stroke-width="0.9"/>
+<text x="474" y="152" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="12" font-weight="400" fill="#0C447C" text-anchor="start" dominant-baseline="central">bibit-agenthub-plugin</text>
+<rect x="168" y="176" width="282" height="32" rx="8" fill="#FFFFFF" stroke="#B5D4F4" stroke-width="0.9"/>
+<text x="182" y="192" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="12" font-weight="400" fill="#0C447C" text-anchor="start" dominant-baseline="central">bibit-filesearch-plugin</text>
+<rect x="460" y="176" width="282" height="32" rx="8" fill="#FFFFFF" stroke="#B5D4F4" stroke-width="0.9"/>
+<text x="474" y="192" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="12" font-weight="400" fill="#0C447C" text-anchor="start" dominant-baseline="central">bibit-memory-plugin</text>
+<text x="168" y="226" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="12" font-weight="400" fill="#888780" text-anchor="start" dominant-baseline="central">Verifies plugin signatures at startup; plugins contribute Tool / Skill / Hook / MCP and settings pages</text>
+<rect x="778" y="64" width="192" height="176" rx="14" fill="#F2F8FE" stroke="#185FA5" stroke-width="1"/>
+<text x="796" y="96" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="15" font-weight="500" fill="#0C447C" text-anchor="start" dominant-baseline="central">bibit-voice</text>
+<text x="796" y="126" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">KWS wake word · VAD · ASR</text>
+<text x="796" y="149" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">PipeWire capture</text>
+<text x="796" y="172" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">Listens on /run/bibit/audio.sock</text>
+<text x="796" y="195" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">bibit-voice-tool service</text>
+<text x="796" y="218" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">Fully offline</text>
+<rect x="986" y="64" width="190" height="176" rx="14" fill="#F2F8FE" stroke="#185FA5" stroke-width="1"/>
+<text x="1004" y="96" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="15" font-weight="500" fill="#0C447C" text-anchor="start" dominant-baseline="central">lxqt-schedule</text>
+<text x="1004" y="126" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">D-Bus daemon + CLI</text>
+<text x="1004" y="149" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">One-off / daily / weekly …</text>
+<text x="1004" y="172" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">Reminders via lxqt-notificationd</text>
+<text x="1004" y="195" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">Panel world clock · autostart</text>
+<rect x="150" y="306" width="1026" height="214" rx="16" fill="#F6FBF9" stroke="#9FE1CB" stroke-width="1" stroke-dasharray="6 5"/>
+<text x="168" y="328" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="12" font-weight="400" fill="#0F6E56" text-anchor="start" dominant-baseline="central">Three components that cooperate at runtime: memory over its SDK, security over approval and capability sync</text>
+<rect x="166" y="346" width="400" height="158" rx="12" fill="#E8F6F1" stroke="#0F6E56" stroke-width="1"/>
+<text x="184" y="370" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="15.5" font-weight="500" fill="#085041" text-anchor="start" dominant-baseline="central">bianbu-agent-runtime</text>
+<text x="184" y="389" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">YAML-driven agent service · Python</text>
+<rect x="184" y="402" width="182" height="28" rx="7" fill="#FFFFFF" stroke="#9FE1CB" stroke-width="0.9"/>
+<text x="275" y="416" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="12" font-weight="400" fill="#085041" text-anchor="middle" dominant-baseline="central">Session event stream</text>
+<rect x="378" y="402" width="182" height="28" rx="7" fill="#FFFFFF" stroke="#9FE1CB" stroke-width="0.9"/>
+<text x="469" y="416" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="12" font-weight="400" fill="#085041" text-anchor="middle" dominant-baseline="central">Agent lifecycle</text>
+<rect x="184" y="436" width="182" height="28" rx="7" fill="#FFFFFF" stroke="#9FE1CB" stroke-width="0.9"/>
+<text x="275" y="450" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="12" font-weight="400" fill="#085041" text-anchor="middle" dominant-baseline="central">Model calls</text>
+<rect x="378" y="436" width="182" height="28" rx="7" fill="#FFFFFF" stroke="#9FE1CB" stroke-width="0.9"/>
+<text x="469" y="450" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="12" font-weight="400" fill="#085041" text-anchor="middle" dominant-baseline="central">Tool · plugin execution</text>
+<text x="184" y="476" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11" font-weight="400" fill="#888780" text-anchor="start" dominant-baseline="central">Providers keep connection info; model names live in agent.yaml</text>
+<text x="184" y="494" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11" font-weight="400" fill="#888780" text-anchor="start" dominant-baseline="central">Security boundary fails closed · target K3 (riscv64)</text>
+<rect x="586" y="346" width="280" height="158" rx="12" fill="#FFFFFF" stroke="#0F6E56" stroke-width="1"/>
+<text x="602" y="370" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="15" font-weight="500" fill="#085041" text-anchor="start" dominant-baseline="central">bianbu-agent-memory</text>
+<text x="602" y="400" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="12" font-weight="400" fill="#085041" text-anchor="start" dominant-baseline="central">L1 session · L2 working · L3 long-term</text>
+<text x="602" y="424" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">SDK · adapters · migrations</text>
+<text x="602" y="448" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">Rust · per-session/user isolation</text>
+<text x="602" y="472" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">ships debian/</text>
+<rect x="886" y="346" width="274" height="158" rx="12" fill="#FFFFFF" stroke="#0F6E56" stroke-width="1"/>
+<text x="902" y="370" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="15" font-weight="500" fill="#085041" text-anchor="start" dominant-baseline="central">bianbu-agent-security</text>
+<text x="902" y="400" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="12" font-weight="400" fill="#085041" text-anchor="start" dominant-baseline="central">Tool approval · per-agent capability sync</text>
+<text x="902" y="424" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">securityd signed manifests · fails closed</text>
+<text x="902" y="448" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">SRS / H-LD / LLD / API docs</text>
+<text x="902" y="472" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">security WebUI demo</text>
+<rect x="150" y="596" width="320" height="96" rx="12" fill="#FDF4E4" stroke="#854F0B" stroke-width="1"/>
+<text x="168" y="622" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="15" font-weight="500" fill="#633806" text-anchor="start" dominant-baseline="central">bibit-intent</text>
+<text x="168" y="648" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="12" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">Intent routing + tool execution</text>
+<text x="168" y="670" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#888780" text-anchor="start" dominant-baseline="central">Rules → local inference → cloud escalation</text>
+<rect x="490" y="596" width="320" height="96" rx="12" fill="#FDF4E4" stroke="#854F0B" stroke-width="1"/>
+<text x="508" y="622" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="15" font-weight="500" fill="#633806" text-anchor="start" dominant-baseline="central">bibit-filesearch</text>
+<text x="508" y="648" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="12" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">Local semantic search · HTTP contract</text>
+<text x="508" y="670" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#888780" text-anchor="start" dominant-baseline="central">Indexes ~/Documents; data stays on device</text>
+<rect x="150" y="716" width="320" height="96" rx="12" fill="#FDF4E4" stroke="#854F0B" stroke-width="1"/>
+<text x="168" y="742" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="15" font-weight="500" fill="#633806" text-anchor="start" dominant-baseline="central">bianbu-skill</text>
+<text x="168" y="768" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="12" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">Read-only mirror of Skills on APC</text>
+<text x="168" y="790" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#888780" text-anchor="start" dominant-baseline="central">skills/ unpacked verbatim</text>
+<rect x="490" y="716" width="320" height="96" rx="12" fill="#FDF4E4" stroke="#854F0B" stroke-width="1"/>
+<text x="508" y="742" font-family="'JetBrains Mono','SF Mono',Menlo,Consolas,monospace" font-size="15" font-weight="500" fill="#633806" text-anchor="start" dominant-baseline="central">agent-power-manager</text>
+<text x="508" y="768" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="12" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">CLI for Skill / Plugin / MCP / Expert</text>
+<text x="508" y="790" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#888780" text-anchor="start" dominant-baseline="central">Go · targets Agent Power Cloud (APC)</text>
+<rect x="830" y="596" width="346" height="216" rx="14" fill="#F6F5F1" stroke="#B4B2A9" stroke-width="1" stroke-dasharray="6 5"/>
+<text x="850" y="622" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="14" font-weight="500" fill="#444441" text-anchor="start" dominant-baseline="central">Integration surfaces</text>
+<text x="850" y="652" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">HTTP · search service, one per user</text>
+<text x="850" y="677" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">Unix socket · /run/bibit/audio.sock</text>
+<text x="850" y="702" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">D-Bus · schedules and desktop</text>
+<text x="850" y="727" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">Event stream · session seq log</text>
+<text x="850" y="752" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">Plugin bundle · signed .tgz</text>
+<text x="850" y="777" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">Packaging · debian/ per component</text>
+<line x1="330" y1="240" x2="330" y2="302" stroke="#5F5E5A" stroke-width="1.4" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="208.0" y="259.0" width="244.0" height="24" rx="6" fill="#FFFFFF"/>
+<text x="330" y="271.0" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="12" font-weight="400" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">session event stream · plugin pages</text>
+<line x1="310" y1="520" x2="310" y2="592" stroke="#5F5E5A" stroke-width="1.4" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="213.6" y="544.0" width="192.8" height="24" rx="6" fill="#FFFFFF"/>
+<text x="310" y="556.0" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="12" font-weight="400" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">intent routing / tool calls</text>
+<line x1="650" y1="520" x2="650" y2="592" stroke="#5F5E5A" stroke-width="1.4" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="604.8" y="544.0" width="90.4" height="24" rx="6" fill="#FFFFFF"/>
+<text x="650" y="556.0" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="12" font-weight="400" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">HTTP search</text>
+<text x="150" y="832" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#888780" text-anchor="start" dominant-baseline="central">Fourteen components as git submodules at the repository root; arrows show the documented call direction.</text>
+</svg>
