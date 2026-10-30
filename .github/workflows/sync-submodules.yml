@@ -1,0 +1,119 @@
+name: Sync submodules
+
+on:
+  workflow_dispatch:
+    inputs:
+      submodule:
+        description: "Optional submodule path to update, for example bibit-intent"
+        required: false
+        type: string
+  schedule:
+    - cron: "*/15 * * * *"
+
+concurrency:
+  group: sync-submodules
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+env:
+  TARGET_BRANCH: main
+
+jobs:
+  sync:
+    name: Update submodule pointers on main
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout superproject
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ env.TARGET_BRANCH }}
+          submodules: recursive
+          token: ${{ secrets.SYNC_SUBMODULES_TOKEN || github.token }}
+
+      - name: Configure git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Update tracked submodules
+        env:
+          REQUESTED_SUBMODULE: ${{ github.event.inputs.submodule || '' }}
+        run: |
+          set -euo pipefail
+
+          git submodule sync --recursive
+          git submodule update --init --recursive
+
+          if [ -n "${REQUESTED_SUBMODULE}" ]; then
+            git submodule update --remote --recursive -- "${REQUESTED_SUBMODULE}"
+          else
+            git submodule update --remote --recursive
+          fi
+
+          git status --short
+
+      - name: Commit and push to main
+        run: |
+          set -euo pipefail
+
+          submodule_paths=(
+            bianbu-agent-runtime
+            bianbu-agent-security
+            bianbu-agent-memory
+            bibit-intent
+            bibit
+            bibit-voice
+            bibit-filesearch
+            lxqt-schedule
+            bibit-runtime-plugin
+            bibit-agenthub-plugin
+            bibit-filesearch-plugin
+            bibit-memory-plugin
+            bianbu-skill
+            agent-power-manager
+          )
+
+          if git diff --quiet -- .gitmodules "${submodule_paths[@]}"; then
+            echo "No submodule pointer changes."
+            exit 0
+          fi
+
+          mapfile -t changed_submodules < <(git diff --name-only -- "${submodule_paths[@]}")
+
+          if ((${#changed_submodules[@]} == 0)); then
+            commit_subject="chore(submodule): update metadata"
+          elif ((${#changed_submodules[@]} == 1)); then
+            commit_subject="chore(submodule): update ${changed_submodules[0]}"
+          elif ((${#changed_submodules[@]} <= 3)); then
+            changed_list="${changed_submodules[0]}"
+            for path in "${changed_submodules[@]:1}"; do
+              changed_list+=", ${path}"
+            done
+            commit_subject="chore(submodule): update ${changed_list}"
+          else
+            commit_subject="chore(submodule): update ${#changed_submodules[@]} submodules"
+          fi
+
+          {
+            printf '%s\n\n' "${commit_subject}"
+            echo "Updated submodules:"
+            if ((${#changed_submodules[@]} > 0)); then
+              git diff --submodule=log -- "${changed_submodules[@]}"
+            fi
+            if ! git diff --quiet -- .gitmodules; then
+              echo
+              echo ".gitmodules metadata changed."
+            fi
+            echo
+            echo "Trigger: ${GITHUB_EVENT_NAME}"
+          } > commit-message.txt
+
+          git add .gitmodules "${submodule_paths[@]}"
+          git commit -F commit-message.txt
+
+          git pull --rebase origin "${TARGET_BRANCH}"
+          git push origin "HEAD:${TARGET_BRANCH}"

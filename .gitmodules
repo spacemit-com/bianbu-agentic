@@ -1,0 +1,56 @@
+[submodule "bianbu-agent-runtime"]
+	path = bianbu-agent-runtime
+	url = https://github.com/spacemit-com/bianbu-agent-runtime.git
+	branch = main
+[submodule "bianbu-agent-security"]
+	path = bianbu-agent-security
+	url = https://github.com/spacemit-com/bianbu-agent-security.git
+	branch = main
+[submodule "bianbu-agent-memory"]
+	path = bianbu-agent-memory
+	url = https://github.com/spacemit-com/bianbu-agent-memory.git
+	branch = main
+[submodule "bibit-intent"]
+	path = bibit-intent
+	url = https://github.com/spacemit-com/bibit-intent.git
+	branch = main
+[submodule "bibit"]
+	path = bibit
+	url = https://github.com/spacemit-com/bibit.git
+	branch = main
+[submodule "bibit-voice"]
+	path = bibit-voice
+	url = https://github.com/spacemit-com/bibit-voice.git
+	branch = main
+[submodule "bibit-filesearch"]
+	path = bibit-filesearch
+	url = https://github.com/spacemit-com/bibit-filesearch.git
+	branch = main
+[submodule "lxqt-schedule"]
+	path = lxqt-schedule
+	url = https://github.com/spacemit-com/lxqt-schedule.git
+	branch = main
+[submodule "bibit-runtime-plugin"]
+	path = bibit-runtime-plugin
+	url = https://github.com/spacemit-com/bibit-runtime-plugin.git
+	branch = main
+[submodule "bibit-agenthub-plugin"]
+	path = bibit-agenthub-plugin
+	url = https://github.com/spacemit-com/bibit-agenthub-plugin.git
+	branch = bianbu-26.04
+[submodule "bibit-filesearch-plugin"]
+	path = bibit-filesearch-plugin
+	url = https://github.com/spacemit-com/bibit-filesearch-plugin.git
+	branch = main
+[submodule "bibit-memory-plugin"]
+	path = bibit-memory-plugin
+	url = https://github.com/spacemit-com/bibit-memory-plugin.git
+	branch = main
+[submodule "bianbu-skill"]
+	path = bianbu-skill
+	url = https://github.com/spacemit-com/bianbu-skill.git
+	branch = main
+[submodule "agent-power-manager"]
+	path = agent-power-manager
+	url = https://github.com/spacemit-com/agent-power-manager.git
+	branch = bianbu-26.04
