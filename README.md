@@ -30,35 +30,35 @@ documentation and tooling.
 
 | Path | Component | Role | Stack | Branch |
 |---|---|---|---|---|
-| `bianbu-agent-runtime/` | Bianbu Agent Runtime | YAML-driven agent service and runtime core: session event stream, agent lifecycle, model calls, tool/plugin execution, security boundary | Python | `main` |
-| `bianbu-agent-security/` | Bianbu Agent Security | Security boundary: tool approval, per-agent capability sync, `securityd` signed manifests; ships design/H‑LD/LLD docs and Debian packaging | daemon + Debian | `main` |
-| `bianbu-agent-memory/` | Bianbu Agent Memory | Memory subsystem: L1 session drawer, L2 working drawer, L3 long-term drawer, plus SDK, adapters and migrations | Rust | `main` |
-| `bibit-intent/` | Bibit Intent | Intent routing and tool execution: deterministic rules → local inference → cloud escalation | Python | `main` |
+| [`bianbu-agent-runtime/`](https://github.com/spacemit-com/bianbu-agent-runtime) | Bianbu Agent Runtime | YAML-driven agent service and runtime core: session event stream, agent lifecycle, model calls, tool/plugin execution, security boundary | Python | `main` |
+| [`bianbu-agent-security/`](https://github.com/spacemit-com/bianbu-agent-security) | Bianbu Agent Security | Security boundary: tool approval, per-agent capability sync, `securityd` signed manifests; ships design/H‑LD/LLD docs and Debian packaging | daemon + Debian | `main` |
+| [`bianbu-agent-memory/`](https://github.com/spacemit-com/bianbu-agent-memory) | Bianbu Agent Memory | Memory subsystem: L1 session drawer, L2 working drawer, L3 long-term drawer, plus SDK, adapters and migrations | Rust | `main` |
+| [`bibit-intent/`](https://github.com/spacemit-com/bibit-intent) | Bibit Intent | Intent routing and tool execution: deterministic rules → local inference → cloud escalation | Python | `main` |
 
 ### Desktop and interaction
 
 | Path | Component | Role | Stack | Branch |
 |---|---|---|---|---|
-| `bibit/` | BiBit GUI | Desktop front end for the agent (based on Jan); chat, rich messages, attachments, session history, desktop shell | TypeScript / Rust (Tauri) | `main` |
-| `bibit-voice/` | Bibit Voice | Offline voice service: KWS wake word, VAD, ASR, served over `/run/bibit/audio.sock` | C++ / Python | `main` |
-| `bibit-filesearch/` | Bibit File Search | Local semantic file search service with an HTTP contract; data never leaves the machine | Python | `main` |
-| `lxqt-schedule/` | lxqt-schedule | Schedule and reminder module for LXQt: D-Bus daemon + CLI, integrates `lxqt-notificationd`, the panel world clock and `bibit-intent` | C++ | `main` |
+| [`bibit/`](https://github.com/spacemit-com/bibit) | BiBit GUI | Desktop front end for the agent (based on Jan); chat, rich messages, attachments, session history, desktop shell | TypeScript / Rust (Tauri) | `main` |
+| [`bibit-voice/`](https://github.com/spacemit-com/bibit-voice) | Bibit Voice | Offline voice service: KWS wake word, VAD, ASR, served over `/run/bibit/audio.sock` | C++ / Python | `main` |
+| [`bibit-filesearch/`](https://github.com/spacemit-com/bibit-filesearch) | Bibit File Search | Local semantic file search service with an HTTP contract; data never leaves the machine | Python | `main` |
+| [`lxqt-schedule/`](https://github.com/spacemit-com/lxqt-schedule) | lxqt-schedule | Schedule and reminder module for LXQt: D-Bus daemon + CLI, integrates `lxqt-notificationd`, the panel world clock and `bibit-intent` | C++ | `main` |
 
 ### BiBit plugins (frontend contributions)
 
 | Path | Component | Role | Stack | Branch |
 |---|---|---|---|---|
-| `bibit-runtime-plugin/` | Runtime Plugin | Settings pages for experts, providers, local models, tools, MCP, skills, hooks, plugins, security, plus Agent Top / runtime status / logs | TypeScript | `main` |
-| `bibit-agenthub-plugin/` | Agent Hub Plugin | Agent Hub page and settings, host APIs over `service:store`, `file:transfer`, `job:manage`, Provider Protocol v2 | TypeScript | `bianbu-26.04` |
-| `bibit-filesearch-plugin/` | File Search Plugin | Settings → Features → File Search page that configures and observes `bibit-filesearch` | TypeScript | `main` |
-| `bibit-memory-plugin/` | Memory Plugin | Settings → Memory page: enable, retention, clear conversation, wipe, import/export | TypeScript | `main` |
+| [`bibit-runtime-plugin/`](https://github.com/spacemit-com/bibit-runtime-plugin) | Runtime Plugin | Settings pages for experts, providers, local models, tools, MCP, skills, hooks, plugins, security, plus Agent Top / runtime status / logs | TypeScript | `main` |
+| [`bibit-agenthub-plugin/`](https://github.com/spacemit-com/bibit-agenthub-plugin) | Agent Hub Plugin | Agent Hub page and settings, host APIs over `service:store`, `file:transfer`, `job:manage`, Provider Protocol v2 | TypeScript | `bianbu-26.04` |
+| [`bibit-filesearch-plugin/`](https://github.com/spacemit-com/bibit-filesearch-plugin) | File Search Plugin | Settings → Features → File Search page that configures and observes `bibit-filesearch` | TypeScript | `main` |
+| [`bibit-memory-plugin/`](https://github.com/spacemit-com/bibit-memory-plugin) | Memory Plugin | Settings → Memory page: enable, retention, clear conversation, wipe, import/export | TypeScript | `main` |
 
 ### Resources and tooling
 
 | Path | Component | Role | Stack | Branch |
 |---|---|---|---|---|
-| `bianbu-skill/` | Bianbu Skills | Read-only mirror of the Skills published on SpacemiT APC; `skills/` is unpacked verbatim from APC packages | Markdown | `main` |
-| `agent-power-manager/` | Agent Power Manager | CLI that manages Skill, Plugin, MCP and Expert powers for agents | Go | `bianbu-26.04` |
+| [`bianbu-skill/`](https://github.com/spacemit-com/bianbu-skill) | Bianbu Skills | Read-only mirror of the Skills published on SpacemiT APC; `skills/` is unpacked verbatim from APC packages | Markdown | `main` |
+| [`agent-power-manager/`](https://github.com/spacemit-com/agent-power-manager) | Agent Power Manager | CLI that manages Skill, Plugin, MCP and Expert powers for agents | Go | `bianbu-26.04` |
 
 > Note: `branch` in `.gitmodules` is only consulted by `--remote` operations.
 > What a checkout actually pins is the commit recorded in the superproject index.

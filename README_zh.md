@@ -23,35 +23,35 @@ Bianbu AgentOS 汇总了面向 SpacemiT K 系列处理器的端侧 Agent 操作�
 
 | 路径 | 组件 | 作用 | 形态 | 分支 |
 |---|---|---|---|---|
-| `bianbu-agent-runtime/` | Bianbu Agent Runtime | YAML 配置驱动的 Agent 服务与运行时核心：会话事件流、Agent 生命周期、模型调用、Tool 与插件执行、安全边界 | Python | `main` |
-| `bianbu-agent-security/` | Bianbu Agent Security | 安全边界：Tool 审批、per-Agent 能力同步、`securityd` 签名清单；含设计/H‑LD/LLD 文档与 Debian 打包 | 守护进程 + Debian | `main` |
-| `bianbu-agent-memory/` | Bianbu Agent Memory | 记忆子系统：L1 会话、L2 工作记忆、L3 长期记忆，含 SDK、adapters 与 migrations | Rust | `main` |
-| `bibit-intent/` | Bibit Intent | 意图路由与工具执行：确定性规则 → 本地推理 → 云端升级 | Python | `main` |
+| [`bianbu-agent-runtime/`](https://github.com/spacemit-com/bianbu-agent-runtime) | Bianbu Agent Runtime | YAML 配置驱动的 Agent 服务与运行时核心：会话事件流、Agent 生命周期、模型调用、Tool 与插件执行、安全边界 | Python | `main` |
+| [`bianbu-agent-security/`](https://github.com/spacemit-com/bianbu-agent-security) | Bianbu Agent Security | 安全边界：Tool 审批、per-Agent 能力同步、`securityd` 签名清单；含设计/H‑LD/LLD 文档与 Debian 打包 | 守护进程 + Debian | `main` |
+| [`bianbu-agent-memory/`](https://github.com/spacemit-com/bianbu-agent-memory) | Bianbu Agent Memory | 记忆子系统：L1 会话、L2 工作记忆、L3 长期记忆，含 SDK、adapters 与 migrations | Rust | `main` |
+| [`bibit-intent/`](https://github.com/spacemit-com/bibit-intent) | Bibit Intent | 意图路由与工具执行：确定性规则 → 本地推理 → 云端升级 | Python | `main` |
 
 ### 桌面与交互
 
 | 路径 | 组件 | 作用 | 形态 | 分支 |
 |---|---|---|---|---|
-| `bibit/` | BiBit GUI | Agent 桌面前端（以 Jan 为骨架）：对话、富消息、附件、会话历史、桌面外壳 | TypeScript / Rust (Tauri) | `main` |
-| `bibit-voice/` | Bibit Voice | 离线语音服务：KWS 唤醒、VAD、ASR，经 `/run/bibit/audio.sock` 提供服务 | C++ / Python | `main` |
-| `bibit-filesearch/` | Bibit File Search | 本地语义文件检索服务，对外是 HTTP 契约，数据不出本机 | Python | `main` |
-| `lxqt-schedule/` | lxqt-schedule | LXQt 日程与提醒模块：D-Bus 守护进程 + CLI，对接 `lxqt-notificationd`、面板世界时钟与 `bibit-intent` | C++ | `main` |
+| [`bibit/`](https://github.com/spacemit-com/bibit) | BiBit GUI | Agent 桌面前端（以 Jan 为骨架）：对话、富消息、附件、会话历史、桌面外壳 | TypeScript / Rust (Tauri) | `main` |
+| [`bibit-voice/`](https://github.com/spacemit-com/bibit-voice) | Bibit Voice | 离线语音服务：KWS 唤醒、VAD、ASR，经 `/run/bibit/audio.sock` 提供服务 | C++ / Python | `main` |
+| [`bibit-filesearch/`](https://github.com/spacemit-com/bibit-filesearch) | Bibit File Search | 本地语义文件检索服务，对外是 HTTP 契约，数据不出本机 | Python | `main` |
+| [`lxqt-schedule/`](https://github.com/spacemit-com/lxqt-schedule) | lxqt-schedule | LXQt 日程与提醒模块：D-Bus 守护进程 + CLI，对接 `lxqt-notificationd`、面板世界时钟与 `bibit-intent` | C++ | `main` |
 
 ### BiBit 插件（前端贡献）
 
 | 路径 | 组件 | 作用 | 形态 | 分支 |
 |---|---|---|---|---|
-| `bibit-runtime-plugin/` | Runtime Plugin | 专家、服务商、本地模型、工具、MCP、技能、Hook、插件、安全等设置页，以及 Agent Top / Runtime 状态 / 日志 | TypeScript | `main` |
-| `bibit-agenthub-plugin/` | Agent Hub Plugin | Agent Hub 页面与设置子页；通过 `service:store`、`file:transfer`、`job:manage` 与 Provider Protocol v2 接入 | TypeScript | `bianbu-26.04` |
-| `bibit-filesearch-plugin/` | File Search Plugin | 「设置 → Features → File Search」页面，用于配置与观测 `bibit-filesearch` | TypeScript | `main` |
-| `bibit-memory-plugin/` | Memory Plugin | 「设置 → Memory」页面：开关记忆、保留时长、清空会话、全部清除、JSON 导入导出 | TypeScript | `main` |
+| [`bibit-runtime-plugin/`](https://github.com/spacemit-com/bibit-runtime-plugin) | Runtime Plugin | 专家、服务商、本地模型、工具、MCP、技能、Hook、插件、安全等设置页，以及 Agent Top / Runtime 状态 / 日志 | TypeScript | `main` |
+| [`bibit-agenthub-plugin/`](https://github.com/spacemit-com/bibit-agenthub-plugin) | Agent Hub Plugin | Agent Hub 页面与设置子页；通过 `service:store`、`file:transfer`、`job:manage` 与 Provider Protocol v2 接入 | TypeScript | `bianbu-26.04` |
+| [`bibit-filesearch-plugin/`](https://github.com/spacemit-com/bibit-filesearch-plugin) | File Search Plugin | 「设置 → Features → File Search」页面，用于配置与观测 `bibit-filesearch` | TypeScript | `main` |
+| [`bibit-memory-plugin/`](https://github.com/spacemit-com/bibit-memory-plugin) | Memory Plugin | 「设置 → Memory」页面：开关记忆、保留时长、清空会话、全部清除、JSON 导入导出 | TypeScript | `main` |
 
 ### 资源与工具
 
 | 路径 | 组件 | 作用 | 形态 | 分支 |
 |---|---|---|---|---|
-| `bianbu-skill/` | Bianbu Skills | SpacemiT APC 上公开 Skill 的只读镜像，`skills/` 按发布包原样解包 | Markdown | `main` |
-| `agent-power-manager/` | Agent Power Manager | 管理 Skill、Plugin、MCP、Expert 的命令行工具 | Go | `bianbu-26.04` |
+| [`bianbu-skill/`](https://github.com/spacemit-com/bianbu-skill) | Bianbu Skills | SpacemiT APC 上公开 Skill 的只读镜像，`skills/` 按发布包原样解包 | Markdown | `main` |
+| [`agent-power-manager/`](https://github.com/spacemit-com/agent-power-manager) | Agent Power Manager | 管理 Skill、Plugin、MCP、Expert 的命令行工具 | Go | `bianbu-26.04` |
 
 > 说明：`.gitmodules` 里的 `branch` 只影响带 `--remote` 的操作；真正被锁定的是父仓库索引中
 > 记录的组件提交。
